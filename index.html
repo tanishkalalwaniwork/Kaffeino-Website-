@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KAFFEINO — L'Essence | Cinematic Luxury Coffee</title>
+  <meta name="description" content="Savour the world's favourite coffee, crafted for every moment. Explore organic sourcing, slow roasting, and decanter collections.">
+  <link rel="icon" type="image/png" href="_MConverter.eu_Iced_coffee_erupts_into_splash_202606261831/00001.png">
+  <link rel="stylesheet" href="index.css?v=2">
+</head>
+<body>
+
+  <!-- Premium Preloader -->
+  <div class="preloader" id="preloader">
+    <div class="preloader-brand">KAFFEINO</div>
+    <div class="preloader-status">
+      <div class="preloader-bar" id="preloader-bar"></div>
+    </div>
+    <div class="preloader-number" id="preloader-number">0%</div>
+  </div>
+
+  <!-- Custom Cursor Dot -->
+  <div class="custom-cursor-dot" id="cursor-dot"></div>
+
+  <!-- Translucent Fixed Background Canvas Overlay -->
+  <div class="background-media">
+    <div class="canvas-container">
+      <canvas id="coffee-canvas"></canvas>
+    </div>
+    <canvas id="particle-canvas"></canvas>
+    <div class="text-shield-overlay" id="text-shield"></div>
+    <div class="ambient-glow" id="ambient-glow"></div>
+  </div>
+
+  <!-- Transparent to Blur Fixed Header Navbar -->
+  <header class="brand-nav" id="brand-nav">
+    <div class="nav-container">
+      <a href="#" class="nav-logo" id="nav-logo">KAFFEINO<span>®</span></a>
+      <nav class="nav-menu" aria-label="Main Navigation">
+        <a href="#hero-section" class="nav-link">Home</a>
+        <a href="#origin-story" class="nav-link">Sourcing</a>
+        <a href="#product-showcase" class="nav-link">Collection</a>
+        <a href="#sensory-guide" class="nav-link" id="nav-guide-trigger">Sensory selector</a>
+      </nav>
+      <div class="nav-icons">
+        <button class="nav-icon-btn" aria-label="Concierge Request" id="nav-shop-trigger">
+          ACQUIRE
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Side Progress Indicators -->
+  <nav class="progress-indicator" id="progress-indicator" aria-label="Page navigation tracker">
+    <a href="#" class="progress-dot active" data-target="hero-section" aria-label="Hero Scene"></a>
+    <a href="#" class="progress-dot" data-target="pinned-experience" aria-label="Experience Scene"></a>
+    <a href="#" class="progress-dot" data-target="origin-story" aria-label="Sourcing Scene"></a>
+    <a href="#" class="progress-dot" data-target="cinematic-ingredients" aria-label="Ingredients Scene"></a>
+    <a href="#" class="progress-dot" data-target="product-showcase" aria-label="Product Showcase"></a>
+    <a href="#" class="progress-dot" data-target="sensory-guide" aria-label="Sensory guide"></a>
+  </nav>
+
+  <!-- Main Scrollable Storytelling Stack -->
+  <main class="scrollable-content" id="main-content">
+
+    <!-- 1. HERO SECTION (100vh) -->
+    <section class="story-section section-hero" id="hero-section">
+      <div class="hero-content">
+        <h1 class="hero-title reveal-text">It all starts with a<br><span>KAFFEINO.</span></h1>
+        <p class="hero-desc reveal-text">
+          Savour the world's favourite coffee made from carefully selected beans, roasted to perfection.
+        </p>
+        <button class="premium-btn rounded-pill-btn red-btn reveal-text" id="hero-explore-btn" data-magnetic>
+          Explore the Craft &rarr;
+        </button>
+      </div>
+      <div class="scroll-explore">
+        <svg class="scroll-arrow" viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none"><line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
+        <span>Scroll to explore</span>
+      </div>
+    </section>
+
+    <!-- 2. PINNED COFFEE EXPERIENCE SECTION (150vh Scroll Room) -->
+    <section class="story-section section-pinned" id="pinned-experience">
+      <div class="pinned-text-container">
+        <h2 class="pinned-text" id="pinned-message">Crafted for every moment</h2>
+      </div>
+    </section>
+
+    <!-- 3. ORIGIN STORY SECTION (Asymmetric, 100vh) -->
+    <section class="story-section section-origin" id="origin-story">
+      <div class="container-width story-grid">
+        <div class="story-image-col reveal-image">
+          <img src="images/sourcing_farmer.jpg" alt="Local coffee farmer harvesting ripe coffee cherries">
+        </div>
+        <div class="story-text-col">
+          <span class="section-label reveal-text">Our Origins</span>
+          <h2 class="section-title reveal-text">Sourced with care</h2>
+          <p class="section-desc reveal-text">
+            We partner with local farming communities in Vietnam, Brazil, and Colombia, fostering biodiversity and ensuring every single bean grows in volcanic soils.
+          </p>
+          <a href="#sensory-guide" class="story-link reveal-text" id="origin-guide-trigger">Find your signature roast &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. INGREDIENT CINEMATIC SECTION (Scroll Controlled Parallax) -->
+    <section class="story-section section-ingredients" id="cinematic-ingredients">
+      <div class="container-width ingredients-grid">
+        <div class="ingredient-card card-left">
+          <span class="card-label reveal-text">Expert Craft</span>
+          <h3 class="card-title reveal-text">Roasted to Perfection</h3>
+          <p class="card-desc reveal-text">
+            Slowly roasted at precisely 218°C, our gold and dark roasts seal in rich caramel notes and double chocolate aroma.
+          </p>
+        </div>
+        
+        <div class="parallax-bean-container">
+          <img src="images/sourcing_bean.png" alt="Roasted coffee bean drifting" class="parallax-bean" id="parallax-bean">
+        </div>
+        
+        <div class="ingredient-card card-right">
+          <span class="card-label reveal-text">Sustainability</span>
+          <h3 class="card-title reveal-text">Making a Difference</h3>
+          <p class="card-desc reveal-text">
+            Supporting global ecosystems, restoring soil health, and packaging in fully reusable decanters.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. ONE MASSIVE PRODUCT SHOWCASE (100vh Apple-Style) -->
+    <section class="story-section section-product" id="product-showcase">
+      <div class="container-width product-showcase-container">
+        <span class="section-label reveal-text">The Decanter Collection</span>
+        <h2 class="section-title reveal-text">L'ESSENCE</h2>
+        <p class="section-desc reveal-text" style="max-width: 600px; margin: 0 auto 3rem auto;">
+          An edition limited to 500 hand-blown glass bottles globally. Reserved for the ultimate purist.
+        </p>
+        
+        <div class="showcase-image reveal-scale">
+          <img src="images/collection_jars.jpg" alt="Premium Kaffeino coffee product collection lineup" id="showcase-image">
+        </div>
+        
+        <div class="showcase-actions">
+          <button class="premium-btn rounded-pill-btn red-btn reveal-text" id="showcase-cta" data-magnetic>
+            Request Custom Allocation
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. SENSORY SELECTION SECTION (Quiz Intro) -->
+    <section class="story-section section-quiz" id="sensory-guide">
+      <div class="container-width quiz-container">
+        <span class="section-label reveal-text">Sensory Profile</span>
+        <h2 class="section-title reveal-text">Discover Your Cup</h2>
+        <p class="section-desc reveal-text" style="max-width: 550px; margin: 0 auto 3rem auto;">
+          Take our interactive sensory test to identify the exact roast allocation tailored to your ritual.
+        </p>
+        
+        <button class="premium-btn rounded-pill-btn red-btn reveal-text" id="quiz-start-trigger" data-magnetic>
+          Start Sensory Selector
+        </button>
+      </div>
+    </section>
+
+    <!-- 7. MINIMAL FOOTER -->
+    <footer class="minimal-footer" id="minimal-footer">
+      <div class="footer-container">
+        <p>&copy; 2026 KAFFEINO. All rights reserved. Crafted with luxury restraint.</p>
+        <div class="footer-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+          <a href="#">concierge@kaffeino.com</a>
+        </div>
+      </div>
+    </footer>
+
+  </main>
+
+  <!-- Interactive Coffee Guide Selector Modal -->
+  <div class="modal-overlay" id="guide-modal">
+    <div class="modal-close" id="guide-close">&times;</div>
+    <div class="modal-container">
+      <div class="modal-content">
+        <div id="guide-quiz-container">
+          <span class="modal-meta">KAFFEINO PRODUCT GUIDE</span>
+          <h2 class="modal-title">Sensory Coffee Selector</h2>
+          <p class="scene-desc" style="margin-bottom: 2rem;">
+            Answer a single question to find the right KAFFEINO collection decanter for your daily ritual.
+          </p>
+          
+          <h3 class="quiz-question-title">What's your experience with the world of coffee?</h3>
+          <div class="quiz-options">
+            <button class="quiz-opt-btn" data-outcome="black">
+              <span class="opt-icon">&#9749;</span>
+              <span class="opt-text">
+                <strong>I love intense espresso</strong>
+                <span>Seek heavy dark-roast profiles with woodsmoke and cocoa notes.</span>
+              </span>
+            </button>
+            <button class="quiz-opt-btn" data-outcome="amber">
+              <span class="opt-icon">&#127855;</span>
+              <span class="opt-text">
+                <strong>I enjoy balanced gold profiles</strong>
+                <span>Look for sweet gold-roasts with vanilla and caramel highlights.</span>
+              </span>
+            </button>
+            <button class="quiz-opt-btn" data-outcome="velvet">
+              <span class="opt-icon">&#129387;</span>
+              <span class="opt-text">
+                <strong>I prefer chilled cream infusions</strong>
+                <span>Seek smooth slow-drip concentrates with organic sweet cream layers.</span>
+              </span>
+            </button>
+          </div>
+        </div>
+        
+        <div id="guide-result-container" style="display: none;">
+          <span class="modal-meta">YOUR SENSED ALLOCATION</span>
+          <h2 class="modal-title" id="result-title">Black Alchemist</h2>
+          <div class="aroma-grid">
+            <div class="aroma-specs" id="result-specs">
+              <!-- Filled dynamically in JS -->
+            </div>
+            <div class="aroma-description">
+              <p id="result-text">
+                An intense extraction designed for the purist.
+              </p>
+              <div class="notes-tags" id="result-tags">
+                <!-- Filled dynamically in JS -->
+              </div>
+              <div style="display: flex; gap: 1.5rem; margin-top: 2rem;">
+                <button class="premium-btn pill-btn red-btn" id="result-reserve-btn" style="flex: 1;">Request Decanter</button>
+                <button class="premium-btn pill-btn border-btn" id="result-retry-btn">Retry</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Reservation Registry Allocation Modal -->
+  <div class="modal-overlay" id="reserve-modal">
+    <div class="modal-close" id="reserve-close">&times;</div>
+    <div class="modal-container">
+      <div class="modal-content reserve-content">
+        <div id="reserve-form-container">
+          <span class="modal-meta">ALLOCATION REGISTER</span>
+          <h2 class="modal-title">ACQUIRE L'ESSENCE</h2>
+          <p class="scene-desc" style="margin-bottom: 2rem;">
+            Enter your details to request an allocation. Sourcing is limited to 500 hand-blown bottles globally.
+          </p>
+          <form id="reserve-form" class="reserve-form">
+            <div class="form-group">
+              <label for="client-name">Your Name</label>
+              <input type="text" id="client-name" required placeholder="e.g. Alexander Cole">
+            </div>
+            <div class="form-group">
+              <label for="client-email">Email Address</label>
+              <input type="email" id="client-email" required placeholder="e.g. alex@example.com">
+            </div>
+            <div class="form-group">
+              <label for="product-select">Selected Decanter</label>
+              <select id="product-select" required>
+                <option value="black">Black Alchemist</option>
+                <option value="amber">Amber Nectar</option>
+                <option value="velvet">Velvet Eclipse</option>
+              </select>
+            </div>
+            <button type="submit" class="premium-btn pill-btn red-btn" style="width: 100%; margin-top: 1rem;">
+              Request Allocation
+            </button>
+          </form>
+        </div>
+        <div id="reserve-success-container" style="display: none; text-align: center;">
+          <div class="spinner-circle"></div>
+          <h2 class="modal-title" style="margin-top: 2rem; font-size: 2.2rem;">REGISTRATION COMPLETE</h2>
+          <p class="scene-desc" style="margin: 1.5rem auto 0 auto; text-align: center;">
+            Your request has been logged. A brand concierge will contact you in silence.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="index.js?v=2"></script>
+</body>
+</html>
